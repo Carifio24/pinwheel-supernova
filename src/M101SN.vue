@@ -80,6 +80,7 @@
         <icon-button
           v-if="false"
           v-model="showLocationSelector"
+          id="location-selector"
           fa-icon="location-pin"
           :color="accentColor"
           :focus="accentColor2"
@@ -90,6 +91,7 @@
       </div>
       <div id="left-buttons">
         <icon-button
+          id="text-icon"
           v-model="showTextSheet"
           fa-icon="book-open"
           :color="accentColor"
@@ -99,6 +101,7 @@
       </icon-button>
       <icon-button
           v-model="showVideoSheet"
+          id="video-icon"
           fa-icon="video"
           :color="accentColor"
           tooltip-text="Watch video"
@@ -106,6 +109,7 @@
           >
       </icon-button>
       <icon-button
+          id="reset-icon"
           @activate="centerView"
           fa-icon="refresh"
           :color="accentColor"
@@ -115,6 +119,7 @@
       </icon-button>
       <icon-button
           v-model="showConstellations"
+          id="constellations-icon"
           :color="accentColor"
           fa-icon="constellation"
           :tooltip-text="showConstellations ? 'Hide constellations' : 'Show constellations'"
@@ -123,6 +128,7 @@
       </icon-button>
       <icon-button
           v-model="showArrow"
+          id="arrow-icon"
           :color="accentColor"
           fa-icon="arrow-right"
           :tooltip-text="showArrow ? 'Hide the arrow' : 'Show the arrow'"
