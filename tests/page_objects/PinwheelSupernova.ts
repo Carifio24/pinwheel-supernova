@@ -80,6 +80,9 @@ const bottomContent = {
   commands: {},
   sections: {},
   elements: {
+    tools: {
+      selector: "#tools"
+    },
     chartButton: {
       selector: "#chart-button"
     },
@@ -97,7 +100,17 @@ const bottomContent = {
     },
     opacitySlider: {
       selector: "#opacity-slider"
+    },
+    credits: {
+      selector: "#credits"
+    },
+    creditIcon: {
+      selector: "#credits a"
     }
+  },
+
+  props: {
+    creditIconCount: 4
   }
 };
 
