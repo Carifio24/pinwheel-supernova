@@ -836,6 +836,7 @@ export default defineComponent({
   data() {
     const now = new Date();
     return {
+      arrowCreated: false,
       showSplashScreen: true,
       imagesetLayers: {} as Record<string, ImageSetLayer>,
       layersLoaded: false,
@@ -1062,6 +1063,8 @@ export default defineComponent({
           decRad: this.wwtDecRad,
           zoomDeg: this.initialPosition.zoom,
           instant: true
+        }).then(() => {
+          this.arrowCreated = true;
         });
       }, 100);
 
@@ -1087,7 +1090,7 @@ export default defineComponent({
       return !this.ready;
     },
     ready(): boolean {
-      return this.layersLoaded && this.positionSet;
+      return this.layersLoaded && this.positionSet && this.arrowCreated;
     },
     smallSize(): boolean {
       return this.$vuetify.display.smAndDown;
